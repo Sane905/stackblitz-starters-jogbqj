@@ -1,0 +1,16 @@
+query FetchDateVacancies($menuUid: String!, $fromDate: ISO8601Date!, $toDate: ISO8601Date!) {
+  dateVacancies(menuUid: $menuUid, fromDate: $fromDate, toDate: $toDate) {
+    date
+    vacancy
+  }
+}
+
+query FetchScheduleBlocks($menuUid: String!, $fromDate: ISO8601Date!, $toDate: ISO8601Date!) {
+  scheduleBlocks(menuUid: $menuUid, fromDate: $fromDate, toDate: $toDate) {
+    uid
+    date
+    startTime
+    endTime
+    vacancy
+  }
+}
